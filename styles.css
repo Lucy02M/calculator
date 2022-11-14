@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator{
+    border: 2px solid;
+    padding: 10px;
+    width: 400px;
+}
+
+#display{
+    border: 2px solid;
+    text-align: end;
+}
+
+button{
+    width: 60px;
+    height: 30px;
+    margin: 5px;
+}
+
+#clear{
+    grid-area: 1 / 1 / 2 / 3;
+    width: 90px;
+}
+
+#delete{
+    grid-area: 1 / 3 / 2 / 5;
+    width: 90px;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
