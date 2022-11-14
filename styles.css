@@ -1,7 +1,3 @@
-*{
-    border: 1px solid;
-}
-
 body{
     display: flex;
     justify-content: center;
@@ -9,25 +5,29 @@ body{
 }
 
 #calculator{
-    padding: 20px;
-    width: 500px;
+    padding: 40px 20px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: blue;
 }
 
 #display{
     text-align: end;
     padding: 20px;
-    margin: 20px 0;
-    width: 400px;
+   margin: 0 0 20px 0;
+    width: 340px;
+    height: 30px;
+    background-color: antiquewhite;
 }
 
 button{
     width: 80px;
     height: 70px;
     margin: auto;
+    background-color: antiquewhite;
 }
 
 #clear{
