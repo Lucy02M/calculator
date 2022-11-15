@@ -21,7 +21,7 @@ body{
 
 #display{
     text-align: end;
-    padding: 20px;
+    padding: 10px 20px 30px 20px;
    margin: 0 0 20px 0;
     width: 340px;
     height: 30px;
@@ -35,6 +35,13 @@ body{
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
     letter-spacing: -1.4px;
+    overflow: hidden;
+}
+
+.previousNumber{
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: rgb(138, 230, 0, 60%);
 }
 
 button{
@@ -103,7 +110,7 @@ button:active{
     border-top: none;
 }
 
-#clear{
+.clear{
     grid-area: 1 / 1 / 2 / 3;
     width: 180px;
     height: 60px;
@@ -115,7 +122,7 @@ button:active{
     border-top: none;
 }
 
-#clear:hover{
+.clear:hover{
     height:55px;
     width: 175px;
     border-right: 5px outset #b45a50;
@@ -124,7 +131,7 @@ button:active{
     border-top: none;
 }
 
-#clear:active{
+.clear:active{
     height:50px;
     width: 175px;
     border-right: 3px outset #b45a50;
@@ -174,6 +181,6 @@ button:active{
     width: 400px;
 }
 
-.digit{
+.operator{
     font-size: 40px;
 }
