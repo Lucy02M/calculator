@@ -19,6 +19,9 @@ const dot = document.querySelector("#dot");
 const clear = document.querySelector(".clear");
 clear.addEventListener("click", clearCalculator);
 
+const del = document.querySelector(".delete");
+del.addEventListener("click", handleDelete);
+
 const numberButtons = document.querySelectorAll(".number");
 
 const operators = document.querySelectorAll(".operator");
