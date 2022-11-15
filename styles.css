@@ -15,6 +15,7 @@ body{
     background: linear-gradient(180deg, rgba(176,167,167,1) 0%, rgba(66,59,59,1) 23%, rgba(69,65,65,1) 86%, rgba(113,110,110,1) 100%);
     border: 12px groove rgba(55,53,61,0.68);
     border-radius: 40px 40px 24px 24px;
+    margin-top: 50px;
     
 }
 
@@ -57,12 +58,48 @@ button{
 
 }
 
+button:hover{
+    height:65px;
+    width: 78px;
+    border-right: 5px outset #b8a4a2;
+    border-bottom: 15px outset #ecd7d4;
+    border-left: 5px outset #c4b8b7;
+    border-top: none;
+}
+
+button:active{
+    height:60px;
+    width: 78px;
+    border-right: 3px outset #b8a4a2;
+    border-bottom: 7px outset #ecd7d4;
+    border-left: 3px outset #c4b8b7;
+    border-top: none;
+}
+
 .number{
     background: linear-gradient(18deg, rgb(100, 93, 93) 7%, rgb(63, 54, 54) 100%);
     color: #cecbc9;
     border-right: 7px outset #887c7a;
     border-bottom: 20px outset #9b8d8b;
     border-left: 7px outset #756a69;
+    border-top: none;
+}
+
+.number:hover{
+    height:65px;
+    width: 78px;
+    border-right: 5px outset #887c7a;
+    border-bottom: 15px outset #9b8d8b;
+    border-left: 5px outset #756a69;
+    border-top: none;
+}
+
+.number:active{
+    height:60px;
+    width: 78px;
+    border-right: 3px outset #887c7a;
+    border-bottom: 7px outset #9b8d8b;
+    border-left: 3px outset #756a69;
     border-top: none;
 }
 
@@ -78,6 +115,24 @@ button{
     border-top: none;
 }
 
+#clear:hover{
+    height:55px;
+    width: 175px;
+    border-right: 5px outset #b45a50;
+    border-bottom: 15px outset #c74536;
+    border-left: 5px outset #d6655b;
+    border-top: none;
+}
+
+#clear:active{
+    height:50px;
+    width: 175px;
+    border-right: 3px outset #b45a50;
+    border-bottom: 7px outset #c74536;
+    border-left: 3px outset #d6655b;
+    border-top: none;
+}
+
 #delete{
     grid-area: 1 / 3 / 2 / 5;
     width: 180px;
@@ -89,6 +144,26 @@ button{
     border-left: 7px outset #d6655b;
     border-top: none;
 }
+
+#delete:hover{
+    height:55px;
+    width: 175px;
+    border-right: 5px outset #b45a50;
+    border-bottom: 15px outset #c74536;
+    border-left: 5px outset #d6655b;
+    border-top: none;
+}
+
+ #delete:active{
+    height:50px;
+    width: 175px;
+    border-right: 3px outset #b45a50;
+    border-bottom: 7px outset #c74536;
+    border-left: 3px outset #d6655b;
+    border-top: none;
+}
+
+
 
 #main{
     display: grid;
