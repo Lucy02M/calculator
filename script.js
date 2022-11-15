@@ -14,7 +14,17 @@ equal.addEventListener("click", () =>{
   }
 });
 
-const dot = document.querySelector("#dot");
+const decimal = document.querySelector(".dot");
+decimal.addEventListener("click", () => {
+  addDecimal();
+});
+
+function addDecimal() {
+  if (!currentNum.includes(".")) {
+    currentNum += ".";
+    currentDisplayNumber.textContent = currentNum;
+  }
+}
 
 const clear = document.querySelector(".clear");
 clear.addEventListener("click", clearCalculator);
