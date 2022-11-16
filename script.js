@@ -14,8 +14,8 @@ const operators = document.querySelectorAll(".operator");
 window.addEventListener("keydown", handleKeyPress);
 clear.addEventListener("click", clearCalculator);
 del.addEventListener("click", handleDelete);
-equal.addEventListener("click", () =>{
-  if (currentNum != "" && previousNum != ""){
+equal.addEventListener("click", () => {
+  if (currentNum != "" && previousNum != "") {
     calculate();
   }
 });
@@ -35,13 +35,17 @@ operators.forEach((btn) => {
   });
 });
 
-function handleKeyPress(e){
+function handleKeyPress(e) {
   e.preventDefault();
-  if (e.key >= 0 && e.key <= 9 || e.key == ".") {
+  if ((e.key >= 0 && e.key <= 9) || e.key == ".") {
     handleNumber(e.key);
   }
-  if (e.key === "Enter" || (e.key === "=" && currentNum != "" && previousNum != ""))
-  {calculate();}
+  if (
+    e.key === "Enter" ||
+    (e.key === "=" && currentNum != "" && previousNum != "")
+  ) {
+    calculate();
+  }
   if (e.key === "+" || e.key === "-") {
     handleOperator(e.key);
   }
@@ -57,17 +61,18 @@ function handleKeyPress(e){
 }
 
 function handleNumber(number) {
-  if (previousNum !== "" && currentNum !=="" && operator === ""){
+  if (previousNum !== "" && currentNum !== "" && operator === "") {
     previousNum = "";
     currentDisplayNumber.textContent = currentNum;
   }
-  if (currentNum.length <= 15){
-  currentNum += number;
-  currentDisplayNumber.textContent = currentNum;}
+  if (currentNum.length <= 15) {
+    currentNum += number;
+    currentDisplayNumber.textContent = currentNum;
+  }
 }
 
 function handleOperator(op) {
-  if (previousNum === ""){
+  if (previousNum === "") {
     previousNum = currentNum;
     operatorCheck(op);
   } else if (currentNum === "") {
@@ -76,7 +81,7 @@ function handleOperator(op) {
     calculate();
     operator = 0;
     currentDisplayNumber.textContent = "0";
-    previousDisplayNumber.textContent = previousNum +  " " + operator;
+    previousDisplayNumber.textContent = previousNum + " " + operator;
   }
 }
 
@@ -87,23 +92,23 @@ function addDecimal() {
   }
 }
 
-function roundNumber(num){
+function roundNumber(num) {
   return Math.round(num * 100000) / 100000;
-} 
+}
 
 function operatorCheck(text) {
   operator = text;
-  previousDisplayNumber.textContent = previousNum +  " " + operator;
+  previousDisplayNumber.textContent = previousNum + " " + operator;
   currentDisplayNumber.textContent = "0";
   currentNum = "";
-};
+}
 
 function handleDelete() {
   if (currentNum != "") {
     currentNum = currentNum.slice(0, -1);
     currentDisplayNumber.textContent = currentNum;
     if (currentNum === "") {
-      currentDisplayNumber.textContent= "0";
+      currentDisplayNumber.textContent = "0";
     }
   }
   if (currentNum === "" && previousNum !== "" && operator === "") {
@@ -115,12 +120,11 @@ function handleDelete() {
 function calculate() {
   previousNum = Number(previousNum);
   currentNum = Number(currentNum);
-  if (previousNum == "5" && currentNum == "5" && operator === "+"){
+  if (previousNum == "5" && currentNum == "5" && operator === "+") {
     previousNum = "Patata";
     displayResults();
     return;
-  }
-  else if (operator === "+") {
+  } else if (operator === "+") {
     previousNum += currentNum;
   } else if (operator === "-") {
     previousNum -= currentNum;
@@ -139,9 +143,8 @@ function calculate() {
   displayResults();
 }
 
-
-function displayResults(){
-  if (previousNum.length <= 15){
+function displayResults() {
+  if (previousNum.length <= 15) {
     currentDisplayNumber.textContent = previousNum;
   } else {
     currentDisplayNumber.textContent = previousNum.slice(0, 16) + "...";
@@ -151,7 +154,7 @@ function displayResults(){
   currentNum = "";
 }
 
-function clearCalculator(){
+function clearCalculator() {
   currentNum = "";
   previousNum = "";
   currentDisplayNumber.textContent = "0";
